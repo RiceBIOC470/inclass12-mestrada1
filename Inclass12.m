@@ -48,7 +48,7 @@ imshow(img2_open);
 % represents one nucleus and these two values are plotted against each other
 
 % Channel/Image 2
-cell_properties = regionprops(img2_open, img2_sm_bgsub, 'MeanIntensity', 'MaxIntensity', 'PixelValues', 'Area', 'Centroid');
+cell_properties = regionprops(img2_open, img2, 'MeanIntensity', 'MaxIntensity', 'PixelValues', 'Area', 'Centroid');
 intensities = [cell_properties.MeanIntensity];
 areas = [cell_properties.Area];
 plot(areas, intensities, 'r.', 'MarkerSize', 18);
